@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    align-items: center; /* Center align the boxes */
+    margin-top: 50px;
+    width: 500px;
+    background-color: white;
+    padding:50px 0px
+}
+
+.box {
+    width: 400px; /* Set a fixed width for boxes */
+    height: 100px; /* Default height */
+    background-color: white;
+    color: white;
+    margin: 10px 0; /* Space between boxes */
+    transition: height 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+    overflow: hidden; /* Hide overflow content */
+    position: relative; /* Position for absolute content */
+    padding: 0px 20px;
+    color:black;
+    outline: 2px solid #C8C8C8;
+}
+
+.box.expanded {
+    height: 180px; /* Expanded height */
+    outline: 2px solid #FF6B82;
+    background-color: #f5e2e4;
+}
+
+.content {
+    display: none; /* Hide content by default */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: white;
+}
+.inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    position: relative;
+    top: 30px;
+}
+.inner2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+.unit_section{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    flex-direction: column;
+}
+.discount_price{
+    font-weight: bold;
+}
+.total_price{
+    color:grey;
+    font-size: 10px;
+}
+.std_price{
+    font-size: 15px;
+    font-weight: 100;
+}
+.unit{
+    font-weight: bold;
+}
+.discount_card{
+    background-color: rgb(255, 112, 136);
+    font-size: 16px;
+    border-radius: 2px;
+    padding:2px 4px;
+    color:white
+}
+
+:root {
+    --background-gradient: linear-gradient(30deg, #f39c12 30%, #f1c40f);
+    --gray: #34495e;
+    --darkgray: #2c3e50;
+  }
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 0;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #000000;
+    background-color: white;
+    background-image: none;
+    cursor: pointer;
+  }
+  /* Remove IE arrow */
+  select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 5em;
+    height: 20px;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1em;
+    background-color: #ffffff;
+    transition: .25s all ease;
+    pointer-events: none;
+    font-size: 6px;
+    color:black
+  }
+  /* Transition */
+  .select:hover::after {
+    color: #f39c12;
+  }
+  table tr td{
+    font-size: 11px;
+    padding: 3px;
+    color:black
+  }
+  .content{
+    position: relative;
+    left:25px;
+    top:50px 
+  }
+  .checkout_detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+  }
+  .btn-section{
+    display: flex;
+    width:100%;
+  }
+  .btn-section button{
+    background-color: #FF6B82;
+    width:80%;
+    margin:auto;
+    padding:10px 0px;
+    color:white;
+    border:none;;
+    border-radius: 5px;
+  }
+  .plus_icon{
+    font-size: 20px;
+    position: relative;
+    top: 2px;
+  }
+  h2 {
+    overflow: hidden;
+    color:#FF6B82
+}
+.heading_section{
+    width: 80%;
+}
+.center-text {
+  text-align: center;
+}
+
+.right-text {
+  text-align: right;
+}
+
+.right-line:after {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-right: -100%;
+    margin-left: 10px;
+    border-top: 1px solid #C8C8C8;
+}
+
+.left-line:before {
+    content:"";
+    display: inline-block;
+    height: 0.5em;
+    vertical-align: bottom;
+    width: 100%;
+    margin-left: -100%;
+    margin-right: 10px;
+    border-top: 1px solid #C8C8C8;
+}
+.free_del{
+    color:#FF6B82
+}
+
+
+@media(max-width:800px){
+    .box {
+        width:90%; /* Set a fixed width for boxes */
+    }
+}
+@media(max-width:400px){
+    .box ,.checkout_detail, .heading_section {
+     font-size: small;
+    }
+}
